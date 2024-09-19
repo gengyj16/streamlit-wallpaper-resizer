@@ -60,7 +60,7 @@ def process_image(image, alignV, align, selected_resolutions):
     zip_buffer.seek(0)
     return zip_buffer
 
-
+st.set_page_config(page_title="多分辨率壁纸生成")
 st.title("多分辨率壁纸生成")
 uploaded_file = st.file_uploader(
     "选择一张图片...",
