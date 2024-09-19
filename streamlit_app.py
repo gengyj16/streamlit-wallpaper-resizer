@@ -52,7 +52,7 @@ def process_image(image, alignV, align, selected_resolutions):
                         new_x = 0
                     nim.paste(im, (int(new_x), 0))
 
-
+                nim = nim.resize((w, hi), Image.Resampling.LANCZOS)
                 # Convert image to RGB
                 nim = nim.convert("RGB")
 
