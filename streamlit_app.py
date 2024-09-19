@@ -61,7 +61,7 @@ def process_image(image, alignV, align, selected_resolutions):
                 nim.save(img_byte_arr, format="JPEG", quality=92)
                 img_byte_arr.seek(0)
                 zip_file.writestr(
-                    f"{folder}/oppo_default_wallpaper.jpg", img_byte_arr.read()
+                    f"{folder}/{pic_name}.jpg", img_byte_arr.read()
                 )
 
     # Save the zip file in memory and return
@@ -79,6 +79,7 @@ selected_resolutions = st.multiselect(
         default=size_list[0:8],
         format_func=lambda x: f"{x[0]}x{x[1]}",
 )
+pic_name = st.text_input("图片名称", "oppo_default_wallpaper")
 alignV = st.selectbox("竖向对齐", ["居中", "顶部", "底部"])
 align = st.selectbox("横向对齐", ["居中", "居左", "居右"])
 if uploaded_file is not None:
