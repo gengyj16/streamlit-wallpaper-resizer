@@ -95,6 +95,6 @@ if uploaded_file is not None:
         st.download_button(
             label="下载多分辨率壁纸",
             data=zip_buffer,
-            file_name="OPPO_wallpaper_res.zip",
+            file_name="wallpaper_res.zip",
             mime="application/zip",
         )
