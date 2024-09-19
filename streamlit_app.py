@@ -90,7 +90,7 @@ if uploaded_file is not None:
 
         # Process the image and get the zip in memory
         zip_buffer = process_image(uploaded_file, alignV_value, align_value, selected_resolutions)
-
+        st.success("处理完成！")
         # Provide download link for the zip file
         st.download_button(
             label="下载多分辨率壁纸",
