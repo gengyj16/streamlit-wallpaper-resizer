@@ -70,7 +70,7 @@ def process_image(image, alignV, align, selected_resolutions):
 
 
 # Streamlit UI
-st.title("OPPO多分辨率壁纸生成")
+st.title("多分辨率壁纸生成")
 # Upload image
 uploaded_file = st.file_uploader("选择一张图片...", type=["jpg", "jpeg", "png"], accept_multiple_files=False, )
 selected_resolutions = st.multiselect(
